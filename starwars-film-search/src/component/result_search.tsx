@@ -13,7 +13,7 @@ export default function ResultSearch() {
         <div style={{overflow:"scroll",overflowX:"hidden", height:"48vh",fontWeight:"bold"}}>
             {
                 queryContext.query.results?.map((film) =>{
-                    return <MDBContainer style={{borderTop: "1px solid black",borderBottom: "1px solid black"}}>
+                    return <MDBContainer style={{marginTop:"10px" ,borderTop: "1px solid black",borderBottom: "1px solid black",backgroundImage:"linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0.1))"}}>
                     <MDBRow>
                         <MDBCol size={10}><h3><b>{film.title}</b></h3></MDBCol>
                         <MDBCol size={2} className="d-flex flex-row-reverse">Episode id:{film.episode_id}</MDBCol>
