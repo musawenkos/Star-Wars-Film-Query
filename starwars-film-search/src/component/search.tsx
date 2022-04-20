@@ -9,8 +9,9 @@ export default function Search(props:handleSearchProps) {
         if(queryContext.query.q) props.handleSearch(queryContext.query.q, 'query')
     }
   return (
-    <MDBInputGroup>
+    <MDBInputGroup style={{marginTop: "81px",marginLeft: "90px"}}>
         <MDBInput 
+            style={{width: "30em",color:"white",fontWeight:"bold"}}
             id='search_film'
             value={queryContext.query.q}
             onChange={(event) => queryContext ? queryContext.setQuery({q:event.target.value}): null }
