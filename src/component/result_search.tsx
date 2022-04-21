@@ -1,13 +1,10 @@
-import { MDBBtn, MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import{ useContext,useState } from "react"
-import { QueryContext, ResultObj } from "../state/QueryContext"
+import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
+import{ useContext } from "react"
+import { QueryContext } from "../state/QueryContext"
 
 export default function ResultSearch() {
-    const [index, setIndex] = useState(0);
     const queryContext = useContext(QueryContext);
-    const result = queryContext.query.results?.map((films) =>{
-        return <h2 key={films.episode_id}>{films.title}</h2>
-    })
+    
     
     return(
         <div style={{overflow:"scroll",overflowX:"hidden", height:"48vh",fontWeight:"bold"}}>
